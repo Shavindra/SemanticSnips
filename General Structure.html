@@ -21,6 +21,7 @@
 	3. Global Attributes
     
     4. Body
+    	2.1 Header Element
 
 
 -->
@@ -46,6 +47,8 @@
 <!-- 2.	<HEAD ELEMENT MARKUP -->
 
 <head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<title>Demonstration</title>
     <!-- defines the base URL for all the relative URLS -->
     <base href="http://www.domain.com/" target="_blank">
@@ -55,7 +58,6 @@
     <meta name="description" content="Description goes here">
     <meta name="keywords" content="HTML,CSS,XML,JavaScript">
     <meta name="author" content="FirstName LastName">
-    <meta charset="UTF-8">
     <!-- Meta Viewport
     	 Ref: https://developer.mozilla.org/en-US/docs/Mobile/Viewport_meta_tag
     -->
@@ -77,14 +79,40 @@
 
 
 <body>
-	
+	<!-- Header Content -->
+	<header>
     
+    </header>
+    
+    <!-- Page Content -->
+	<div class="container">
+    	<h1> Title of the page </h1>
+    
+    
+    </div>
+    
+    <!-- Footer Content -->
+    <footer class="footer">
+    	<div class="container">
+            <nav>
+                <ul class="nav nav-tabs">
+                    <li class="active">
+                    <a href="/credits">Credits</a>
+                    </li>
+                    <li><a href="/terms">Terms</a></li>
+                    <li><a href="/help">Help</a></li>
+                </ul>
+            </nav>
+            <P>Copyright © 2009 Agency Name</P>
+        
+        </div>
+    </footer>
     <!-- End of body scripts -->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
     <script src="/assets/js/main.js"></script>
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <!-- Google Analytics: Change UA-XXXXX-X to to site's ID. -->
 	<script>
 		var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
 		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];

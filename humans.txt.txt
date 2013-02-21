@@ -1,12 +1,12 @@
 
 #### TEAM #### 
 	
-	Shavin Fonseka (Lead Developer)
+	Lead Developer: Shavin Fonseka
 	  Contact  : @shavindra / linkd.in/shavin
 	  Site	   : shavindra@wordpress.com
 	  Location : London, UK
 
-	FistName Lastname (role)
+	Title    : FistName Lastname 
 	  Contact  : @twitterName / name@domain.com
 	  Site	   : mysite.com
 	  Location : City, Country
@@ -29,6 +29,7 @@
 	Components: Modernizr, jQuery,
 
 	Devices: Mobile / Web
-
+	
+	Language: EN, GB
 
                     
