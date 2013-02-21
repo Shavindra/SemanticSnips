@@ -19,6 +19,8 @@
 			2.5.3 Site Scripts
             
 	3. Global Attributes
+    
+    4. Body
 
 
 -->
@@ -29,23 +31,27 @@
 
 
 <!DOCTYPE HTML>
-<html lang="en-GB">
-    <head>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en-GB" class="no-js"> <!--<![endif]-->
+	<head>
         <title>Demonstration</title>
         <base></head>
         <meta></html>
      
     </head>
-        <body>
+    <body>
         
-        </body>
+	</body>
 </html>
 
 <!-- 2.	<HEAD ELEMENT MARKUP -->
 <head>
 	<title>Demonstration</title>
     <!-- defines the base URL for all the relative URLS -->
-    <base href="http://www.domain.com/images/" target="_blank">
+    <base href="http://www.domain.com/" target="_blank">
+    <link rel="canonical" href="http://domain.com/this-is-the-page-title/" />
     
     <!-- Meta tags -->
     <meta name="description" content="Description goes here">
@@ -59,15 +65,36 @@
     
     <!-- Favicon -->
     <link rel="shortcut icon" href="/assets/img/general/favicon.png" type="image/png">
-	<link rel="shortcut icon" href="/assets/img/general/favicon.png" type="image/png"/>
     <link rel='shortcut icon' href='/assets/img/general/favicon.ico' type='image/x-icon'/>
     
     <!-- Styling -->
     <link rel="stylesheet" type="text/css" href="grid.css">
     <link rel="stylesheet" type="text/css" href="styles.css">
-     
- 
+    
+    <!-- Scripts -->
+	<script src="/assets/js/modernizr-2.6.2.min.js"></script>
+    <script src="/assets/js/plugins.js"></script>
+
 </head>
+
+
+<body>
+	
+    
+    <!-- End of body scripts -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+    <script src="/assets/js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+	<script>
+		var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+		g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+		s.parentNode.insertBefore(g,s)}(document,'script'));
+	</script>
+</body>
+
 
 
 <!-- GLOBAL ATTRIBUTES -->
