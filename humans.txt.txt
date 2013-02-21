@@ -1,0 +1,34 @@
+
+#### TEAM #### 
+	
+	Shavin Fonseka (Lead Developer)
+	  Contact  : @shavindra / linkd.in/shavin
+	  Site	   : shavindra@wordpress.com
+	  Location : London, UK
+
+	FistName Lastname (role)
+	  Contact  : @twitterName / name@domain.com
+	  Site	   : mysite.com
+	  Location : City, Country
+
+		
+
+#### THANKS ####
+
+	Name: name or url
+
+
+       
+
+#### SITE #####
+    
+	Last update: YYYY/MM/DD
+    	
+	Standards: HTML5, CSS3
+    	
+	Components: Modernizr, jQuery,
+
+	Devices: Mobile / Web
+
+
+                    
