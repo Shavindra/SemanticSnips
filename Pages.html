@@ -1,0 +1,41 @@
+<!-- CONTENT PAGE ITEMS 
+
+	.1 Minimal/barebone
+    .2 Blog Article 
+
+
+
+	REF: 
+    	WHATWG - The Article Element  http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-article-element
+    	HTML5 Doctor - http://html5doctor.com/the-article-element/       		
+-->
+
+<!-- Minimal Usage -->
+<article>
+	<h1>Heading Goes </h1>
+    
+	<p>Nam sollicitudin nisi eget lectus condimentum dapibus. Proin sed urna vitae lacus cursus varius porta sit amet nibh. In eleifend est a turpis consectetur molestie. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris euismod urna magna, vitae consequat nibh. Cras porta felis at diam suscipit semper. Donec elementum nisl consectetur felis vehicula tincidunt. Nam luctus posuere velit, luctus convallis nibh ultrices id. Nunc at ullamcorper magna. Vivamus elementum ultrices ipsum, at tempus nunc faucibus et. Sed ullamcorper bibendum neque at pellentesque. </p>
+  
+	<p>...</p>
+
+</article>
+
+
+<!-- Blog article with Schema.org -->
+<article itemscope itemtype="http://schema.org/BlogPosting">
+	<header>
+		<h1 itemprop="headline">The Very First Rule of Life</h1>
+		
+		<p><time itemprop="datePublished" datetime="2009-10-09">3 days ago</time></p>
+  
+		<link itemprop="url" href="?comments=0">
+ 	</header>
+ 	<p>If there's a microphone anywhere near you, assume it's hot and
+	 sending whatever you're saying to the world. Seriously.</p>
+ 	
+    
+	<footer>
+    	<!-- Comments goes here -->
+  		<a itemprop="discussionUrl" href="?comments=1">Show comments...</a>
+	</footer>
+</article>
