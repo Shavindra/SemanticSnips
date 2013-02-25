@@ -1,0 +1,117 @@
+<!-- Articles
+
+	.1 General Usage
+    .2 Minimal/barebone
+    .2 Blog Article (http://www.w3.org/TR/html5/sections.html#the-article-element)
+
+	DEF:
+    	The article element represents a complete, or self-contained, composition in a document, page, application, or site and that is, in principle, independently distributable or reusable, e.g. in syndication. This could be a forum post, a magazine or newspaper article, a blog entry, a user-submitted comment, an interactive widget or gadget, or any other independent item of content.	
+
+	REF: 
+    	WHATWG - The Article Element  http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-article-element
+    	HTML5 Doctor - http://html5doctor.com/the-article-element/       		
+	
+    COMMENTS:
+    	<Article> for wrapping blog comments.
+        		HTML5 spec allows usage of <article> to wrap the comments on the basis that comments are in principle independently distributable or reusable. In general blogging this is contradictory while comments can be syndicated and distributed it can't stand alone without the article. Therefore it's NOT independent. <article> 
+
+
+==================================================== -->
+
+
+
+<!-- General Usage
+==================================================== -->
+
+<article>
+  <header> 
+    <!-- H1 /H2 Title  --> 
+    <!-- hgroup --> 
+    <!-- Byline info --> 
+    <!-- Author info ---> 
+    <!-- date/time --> 
+    
+  </header>
+  <section> 
+    <!-- Page Sections --> 
+    <!-- Main content --> 
+    <!-- Aside --> 
+    
+  </section>
+  <section> ... </section>
+  <footer> 
+    <!-- Coments --> 
+    <!-- Credits--> 
+    <!-- Aside --> 
+    
+  </footer>
+</article>
+
+
+<!-- Minimal Usage 
+==================================================== -->
+
+<article>
+  <h1>Heading Goes Here </h1>
+  <p>Nam sollicitudin nisi eget lectus condimentum dapibus. Proin sed urna vitae lacus cursus varius porta sit amet nibh. In eleifend est a turpis consectetur molestie. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris euismod urna magna, vitae consequat nibh. Cras porta felis at diam suscipit semper. Donec elementum nisl consectetur felis vehicula tincidunt. Nam luctus posuere velit, luctus convallis nibh ultrices id. Nunc at ullamcorper magna. Vivamus elementum ultrices ipsum, at tempus nunc faucibus et. Sed ullamcorper bibendum neque at pellentesque. </p>
+  <p>...</p>
+</article>
+
+<!-- Blog article with Schema.org 
+==================================================== -->
+
+<article itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    <h1 itemprop="headline">The Very First Rule of Life</h1>
+    <div class="byline">
+      <address class="author">
+      By <a rel="author" href="http://example.com/author/john-doe" title="John Doe">John Doe</a>
+      </address>
+      on
+      <time itemprop="datePublished" datetime="2009-10-09">3 days ago</time>
+    </div>
+    <link itemprop="url" href="?comments=0">
+  </header>
+  <p>Danish marzipan cheesecake. Ice cream chocolate sweet marzipan dessert apple pie. Chocolate jujubes pudding topping ice cream jelly-o. Sesame snaps brownie marzipan soufflé halvah ice cream. Ice cream jelly beans muffin donut cupcake. Halvah gummi bears icing. Wypas icing liquorice. </p>
+  <footer> 
+    <!-- Comments goes here --> 
+    <a itemprop="discussionUrl" href="?comments=1">Show comments...</a> </footer>
+</article>
+
+<!-- Article with sections / Single Post Page 
+==================================================== -->
+<article itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    <h1 itemprop="headline">The Very First Rule of Life</h1>
+    <p>
+      <time datetime="2009-10-09">3 days ago</time>
+    </p>
+  </header>
+  <section role="main">
+    <h2></h2>
+    <p>Jelly beans donut sweet roll pudding. Pastry jelly jelly-o chocolate cake soufflé. Donut jujubes soufflé wypas. Marzipan tart lemon drops pudding sweet roll pudding jelly beans donut cheesecake. Lollipop lemon drops jelly beans oat cake sweet cupcake. Topping donut tart.</p>
+    <p> Danish lollipop dragée jujubes pie halvah jelly pie liquorice. Tootsie roll faworki wypas carrot cake marshmallow fruitcake gummi bears marshmallow cotton candy. Donut chupa chups dessert apple pie sweet applicake sweet. </p>
+    <p>...</p>
+  </section>
+  <section itemscope itemtype="http://schema.org/UserComments">
+    <h2>Comments</h2>
+    <article id="c1" class="comment">
+      <footer>
+        <p>Posted by: <span itemprop="author">George Washington</span></p>
+        <p>
+          <time datetime="2009-10-10" itemprop="commentTime">15 minutes ago</time>
+        </p>
+      </footer>
+      <p itemprop="commentText">Yeah! Especially when talking about your lobbyist friends!</p>
+    </article>
+    <article id="c2">
+      <footer>
+        <p>Posted by: <span itemprop="author">George Hammond</span></p>
+        <p>
+          <time datetime="2009-10-10">5 minutes ago</time>
+        </p>
+      </footer>
+      <p>Hey, you have the same first name as me.</p>
+    </article>
+  </section>
+</article>

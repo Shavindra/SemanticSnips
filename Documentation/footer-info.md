@@ -1,23 +1,13 @@
 ## Footer Article
-### tl;dr
 
-2.1.2 is now 2.2.0: four new example templates, added media component, new typographic scale, fixed that box-shadow mixin bug, fixed z-index issues, and [more](https://github.com/twitter/bootstrap/issues?milestone=15&page=1&state=closed).
+REF: http://www.w3.org/TR/html5/sections.html#the-footer-element
+The footer element represents a footer for its nearest ancestor sectioning content or sectioning root element. A footer typically contains information about its section such as who wrote it, links to related documents, copyright data, and the like.
 
-### Highlights
+When the footer element contains entire sections, they represent appendices, indexes, long colophons, verbose license agreements, and other such content.
 
-- **Added four new example templates** to the docs, including a narrow marketing page, sign in form, sticky footer, and a fancy carousel (created for an upcoming .net magazine article).
-- **Added the media component**, to create larger common components like comments, Tweets, etc.
-- **New variable-driven typographic scale** based on `@baseFontSize` and `@baseLineHeight`.
-- Revamped mini, small, and large padding via new variables for inputs and buttons so everything is the same size.
-- Reverted 2.1.1's `.box-shadow();` mixin change that caused compiler errors.
-- Improved dropdown submenus to support dropups and left-aligned submenus.
-- Fixed z-index issues with tooltips and popovers in modals.
-- Hero unit now sets basic type styles for the entire component, rather than on `.hero-unit p { ... }`.
-- Updated JavaScript plugins and docs to jQuery 1.8.1.
-- Added Contributing.md file.
-- Added support for installing Bootstrap via [Bower](http://twitter.github.com/bower).
-- Miscellaneous variable improvements across the board.
-- Miscellaneous documentation typos fixed.
+Contact information for the author or editor of a section belongs in an address element, possibly itself inside a footer. Bylines and other information that could be suitable for both a header or a footer can be placed in either (or neither). The primary purpose of these elements is merely to help the author write self-explanatory markup that is easy to maintain and style; they are not intended to impose specific structures on authors.
 
-For the full list of issues included in this release, visit the [2.2.0 milestone on GitHub](https://github.com/twitter/bootstrap/issues?milestone=15&page=1&state=closed)
+Footers don't necessarily have to appear at the end of a section, though they usually do.
+
+When the nearest ancestor sectioning content or sectioning root element is the body element, then it applies to the whole page.
 
