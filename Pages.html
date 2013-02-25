@@ -1,9 +1,9 @@
 <!-- CONTENT PAGE ITEMS 
 
 	.1 Minimal/barebone
-    .2 Blog Article 
+    .2 Blog Article (http://www.w3.org/TR/html5/sections.html#the-article-element)
 
-
+	
 
 	REF: 
     	WHATWG - The Article Element  http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-article-element
@@ -11,31 +11,59 @@
 -->
 
 <!-- Minimal Usage -->
+
 <article>
-	<h1>Heading Goes </h1>
-    
-	<p>Nam sollicitudin nisi eget lectus condimentum dapibus. Proin sed urna vitae lacus cursus varius porta sit amet nibh. In eleifend est a turpis consectetur molestie. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris euismod urna magna, vitae consequat nibh. Cras porta felis at diam suscipit semper. Donec elementum nisl consectetur felis vehicula tincidunt. Nam luctus posuere velit, luctus convallis nibh ultrices id. Nunc at ullamcorper magna. Vivamus elementum ultrices ipsum, at tempus nunc faucibus et. Sed ullamcorper bibendum neque at pellentesque. </p>
-  
-	<p>...</p>
-
+  <h1>Heading Goes Here </h1>
+  <p>Nam sollicitudin nisi eget lectus condimentum dapibus. Proin sed urna vitae lacus cursus varius porta sit amet nibh. In eleifend est a turpis consectetur molestie. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris euismod urna magna, vitae consequat nibh. Cras porta felis at diam suscipit semper. Donec elementum nisl consectetur felis vehicula tincidunt. Nam luctus posuere velit, luctus convallis nibh ultrices id. Nunc at ullamcorper magna. Vivamus elementum ultrices ipsum, at tempus nunc faucibus et. Sed ullamcorper bibendum neque at pellentesque. </p>
+  <p>...</p>
 </article>
-
 
 <!-- Blog article with Schema.org -->
 <article itemscope itemtype="http://schema.org/BlogPosting">
-	<header>
-		<h1 itemprop="headline">The Very First Rule of Life</h1>
-		
-		<p><time itemprop="datePublished" datetime="2009-10-09">3 days ago</time></p>
-  
-		<link itemprop="url" href="?comments=0">
- 	</header>
- 	<p>If there's a microphone anywhere near you, assume it's hot and
-	 sending whatever you're saying to the world. Seriously.</p>
- 	
-    
-	<footer>
-    	<!-- Comments goes here -->
-  		<a itemprop="discussionUrl" href="?comments=1">Show comments...</a>
-	</footer>
+  <header>
+    <h1 itemprop="headline">The Very First Rule of Life</h1>
+    <p>
+      <time itemprop="datePublished" datetime="2009-10-09">3 days ago</time>
+    </p>
+    <link itemprop="url" href="?comments=0">
+  </header>
+  <p>If there's a microphone anywhere near you, assume it's hot and
+    sending whatever you're saying to the world. Seriously.</p>
+  <footer> 
+    <!-- Comments goes here --> 
+    <a itemprop="discussionUrl" href="?comments=1">Show comments...</a> </footer>
+</article>
+
+<!-- Article with sections -->
+<article itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    <h1 itemprop="headline">The Very First Rule of Life</h1>
+    <p>
+      <time datetime="2009-10-09">3 days ago</time>
+    </p>
+  </header>
+  <p>If there's a microphone anywhere near you, assume it's hot and
+    sending whatever you're saying to the world. Seriously.</p>
+  <p>...</p>
+  <section>
+    <h2>Comments</h2>
+    <article id="c1">
+      <footer>
+        <p>Posted by: George Washington</p>
+        <p>
+          <time datetime="2009-10-10">15 minutes ago</time>
+        </p>
+      </footer>
+      <p>Yeah! Especially when talking about your lobbyist friends!</p>
+    </article>
+    <article id="c2">
+      <footer>
+        <p>Posted by: George Hammond</p>
+        <p>
+          <time datetime="2009-10-10">5 minutes ago</time>
+        </p>
+      </footer>
+      <p>Hey, you have the same first name as me.</p>
+    </article>
+  </section>
 </article>
