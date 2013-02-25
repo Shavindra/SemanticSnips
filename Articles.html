@@ -15,10 +15,9 @@
     	<Article> for wrapping blog comments.
         		HTML5 spec allows usage of <article> to wrap the comments on the basis that comments are in principle independently distributable or reusable. In general blogging this is contradictory while comments can be syndicated and distributed it can't stand alone without the article. Therefore it's NOT independent. <article> 
 
-
+	Guidelines:
+    	If using with genera
 ==================================================== -->
-
-
 
 <!-- General Usage
 ==================================================== -->
@@ -47,7 +46,6 @@
   </footer>
 </article>
 
-
 <!-- Minimal Usage 
 ==================================================== -->
 
@@ -63,7 +61,7 @@
 <article itemscope itemtype="http://schema.org/BlogPosting">
   <header>
     <h1 itemprop="headline">The Very First Rule of Life</h1>
-    <div class="byline">
+    <div class="byline article-meta">
       <address class="author">
       By <a rel="author" href="http://example.com/author/john-doe" title="John Doe">John Doe</a>
       </address>
@@ -72,7 +70,9 @@
     </div>
     <link itemprop="url" href="?comments=0">
   </header>
-  <p>Danish marzipan cheesecake. Ice cream chocolate sweet marzipan dessert apple pie. Chocolate jujubes pudding topping ice cream jelly-o. Sesame snaps brownie marzipan soufflé halvah ice cream. Ice cream jelly beans muffin donut cupcake. Halvah gummi bears icing. Wypas icing liquorice. </p>
+  <section class="article-entry">
+    <p>Danish marzipan cheesecake. Ice cream chocolate sweet marzipan dessert apple pie. Chocolate jujubes pudding topping ice cream jelly-o. Sesame snaps brownie marzipan soufflé halvah ice cream. Ice cream jelly beans muffin donut cupcake. Halvah gummi bears icing. Wypas icing liquorice. </p>
+  </section>
   <footer> 
     <!-- Comments goes here --> 
     <a itemprop="discussionUrl" href="?comments=1">Show comments...</a> </footer>
@@ -96,22 +96,49 @@
   <section itemscope itemtype="http://schema.org/UserComments">
     <h2>Comments</h2>
     <article id="c1" class="comment">
-      <footer>
-        <p>Posted by: <span itemprop="author">George Washington</span></p>
-        <p>
-          <time datetime="2009-10-10" itemprop="commentTime">15 minutes ago</time>
-        </p>
+      <footer class="comment-meta">
+        <address class="author">
+        Posted by: <span itemprop="author">George Washington</span>
+        </address>
+        <time datetime="2009-10-10" itemprop="commentTime">15 minutes ago</time>
       </footer>
       <p itemprop="commentText">Yeah! Especially when talking about your lobbyist friends!</p>
     </article>
-    <article id="c2">
-      <footer>
-        <p>Posted by: <span itemprop="author">George Hammond</span></p>
-        <p>
-          <time datetime="2009-10-10">5 minutes ago</time>
-        </p>
-      </footer>
-      <p>Hey, you have the same first name as me.</p>
-    </article>
+    <!-- Other Comment article formats --> 
   </section>
+</article>
+
+<!-- Section with Multiple articles
+==================================================== -->
+<section>
+  <h1>Articles on: Fruit</h1>
+  <article>
+    <h2>Apple</h2>
+    <p>The apple is the pomaceous fruit of the apple tree...</p>
+  </article>
+  <article>
+    <h2>Orange</h2>
+    <p>The orange is a hybrid of ancient cultivated origin, possibly between pomelo and tangerine...</p>
+  </article>
+  <article>
+    <h2>Banana</h2>
+    <p>Bananas come in a variety of sizes and colors when ripe, including yellow, purple, and red...</p>
+  </article>
+</section>
+<!-- Comment Article v2
+
+Features:
+	Schema extended
+================================================== -->
+
+<article id="c2" class="comment">
+  <header class="comment-meta">
+    <address class="author">
+    Posted by: <a rel="author external nofollow" href="http://example.com/author/john-doe" title="John Doe" itemprop="author">John Doe</a>
+    </address>
+    <time datetime="2009-10-10">5 minutes ago</time>
+  </header>
+  <div class="comment-entry" itemprop="commentText">
+    <p>Hey, you have the same first name as me.</p>
+  </div>
 </article>
