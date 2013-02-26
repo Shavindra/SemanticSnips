@@ -102,36 +102,21 @@
         </address>
         <time datetime="2009-10-10" itemprop="commentTime">15 minutes ago</time>
       </footer>
-      <p itemprop="commentText">Yeah! Especially when talking about your lobbyist friends!</p>
+      <div class="comment-entry" itemprop="commentText">
+        <p>Hey, you have the same first name as me.</p>
+      </div>
     </article>
     <!-- Other Comment article formats --> 
   </section>
 </article>
 
-<!-- Section with Multiple articles
-==================================================== -->
-<section>
-  <h1>Articles on: Fruit</h1>
-  <article>
-    <h2>Apple</h2>
-    <p>The apple is the pomaceous fruit of the apple tree...</p>
-  </article>
-  <article>
-    <h2>Orange</h2>
-    <p>The orange is a hybrid of ancient cultivated origin, possibly between pomelo and tangerine...</p>
-  </article>
-  <article>
-    <h2>Banana</h2>
-    <p>Bananas come in a variety of sizes and colors when ripe, including yellow, purple, and red...</p>
-  </article>
-</section>
 <!-- Comment Article v2
 
-Features:
-	Schema extended
+	Features:
+		Schema extended
 ================================================== -->
 
-<article id="c2" class="comment">
+<article id="c2" class="comment" role="complementary">
   <header class="comment-meta">
     <address class="author">
     Posted by: <a rel="author external nofollow" href="http://example.com/author/john-doe" title="John Doe" itemprop="author">John Doe</a>
@@ -141,4 +126,101 @@ Features:
   <div class="comment-entry" itemprop="commentText">
     <p>Hey, you have the same first name as me.</p>
   </div>
+</article>
+
+<!-- Review article
+
+	Features:
+		Schema extended
+        
+    Ref: http://support.google.com/webmasters/bin/answer.py?hl=en&answer=99170
+================================================== --> 
+
+<!-- If an element can be described by HTML5 it will not be extended by microdata 
+	
+    MD: itemprop="datePublished" 
+    HTML5: <time datetime="2009-10-10">
+	
+-->
+<article class="review" itemprop="review" itemscope itemtype="http://schema.org/Review">
+  <header class="review-meta">
+    <div class="review-ating" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+    	<span itemprop="ratingValue">1</span>/
+        <span itemprop="bestRating">5</span>stars 
+    </div>
+    <address class="author">
+    Posted by: <a rel="author external nofollow" href="http://example.com/author/john-doe" title="John Doe" itemprop="author">John Doe</a>
+    </address>
+    <time datetime="2009-10-10">5 minutes ago</time>
+  </header>
+  <div class="review-entry" itemprop="reviewBody">
+    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada dui id justo porttitor lacinia. Donec nisl eros, condimentum eget pellentesque in, tincidunt ac turpis. Integer at urna eget enim tempus suscipit. Integer rhoncus sem sit amet nulla malesuada placerat. Duis sed lectus eros. Fusce consectetur augue nec est condimentum pellentesque. Phasellus vel vehicula tellus. Mauris bibendum ipsum non nisl varius lacinia. </p>
+    <p>Fusce nunc leo, pellentesque non bibendum at, iaculis ut erat. Nullam id tincidunt mi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam tristique egestas placerat. Nam vulputate adipiscing elit vitae semper. Phasellus malesuada nulla ut mi feugiat gravida. Suspendisse potenti. Pellentesque ullamcorper lorem eget sapien pretium non varius metus facilisis. Aliquam erat volutpat. Aliquam lacinia est at mi dictum nec accumsan neque rutrum. </p>
+  </div>
+</article>
+
+<!-- Product Article with Review Articles
+================================================== -->
+<article class="product" itemscope itemtype="http://schema.org/Product">
+  <header class="product-meta">
+    <h1 itemprop="name">Kenmore White 17" Microwave</h1>
+    <div class="rating">
+     	Best: <span itemprop="bestRating"> 5 </span>
+        Worst: <span itemprop="worstRating"> 1 </span>
+    </div>
+    <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating"> Rated <span itemprop="ratingValue">3.5</span>/5
+          Total Reviews: <span itemprop="reviewCount">11</span> customer reviews 
+    </div>
+  </header>
+  <section role="main">
+    <h2></h2>
+    <p>Jelly beans donut sweet roll pudding. Pastry jelly jelly-o chocolate cake soufflé. Donut jujubes soufflé wypas. Marzipan tart lemon drops pudding sweet roll pudding jelly beans donut cheesecake. Lollipop lemon drops jelly beans oat cake sweet cupcake. Topping donut tart.</p>
+    <p> Danish lollipop dragée jujubes pie halvah jelly pie liquorice. Tootsie roll faworki wypas carrot cake marshmallow fruitcake gummi bears marshmallow cotton candy. Donut chupa chups dessert apple pie sweet applicake sweet. </p>
+    <p>...</p>
+  </section>
+  <section itemscope itemtype="http://schema.org/UserComments">
+    <h2>Comments</h2>
+    <article id="c1" class="comment">
+      <footer class="comment-meta">
+        <address class="author">
+        Posted by: <span itemprop="author">George Washington</span>
+        </address>
+        <time datetime="2009-10-10" itemprop="commentTime">15 minutes ago</time>
+      </footer>
+      <div class="comment-entry" itemprop="commentText">
+        <p>Hey, you have the same first name as me.</p>
+      </div>
+    </article>
+    <!-- Other Comment article formats --> 
+  </section>
+</article>
+
+<!-- Real life usage
+================================================== --> 
+
+<!--
+ Pinterest:
+	 Ref: http://html5doctor.com/html5-simplequiz-7-pinterest/
+          http://html5doctor.com/html5-simplequiz-7-pinterest/#comment-30896
+-->
+
+<article class="pin">
+  <figure class="pin-holder"> <a href="me/cat/"> <img src="cat.jpg" alt="My awesome cat"/> </a>
+    <figcaption>Awesome cat description.</figcaption>
+  </figure>
+  <footer>
+    <ul class="stats">
+      <li>25 likes</li>
+      <li>2 comments</li>
+      <li>100 repins</li>
+    </ul>
+    <div class="attribution"> <a href="/me/"> <img src="me.jpg" alt="Profile picture of me"> </a>
+      <p><a href="/me/">Me</a> onto <a href="/here/">here</a></p>
+    </div>
+  </footer>
+  <menu class="actions" type="toolbar">
+    <button onclick="repin">Repin</button>
+    <button onclick="like">Like</button>
+    <button onclick="comment">Comment</button>
+  </menu>
 </article>
