@@ -39,7 +39,7 @@
   </section>
   <section> ... </section>
   <footer> 
-    <!-- Coments --> 
+    <!-- Coments/Reviews --> 
     <!-- Credits--> 
     <!-- Aside --> 
     
@@ -138,12 +138,19 @@
 
 <!-- If an element can be described by HTML5 it will not be extended by microdata 
 	
-    MD: itemprop="datePublished" 
+    Schema: itemprop="datePublished" 
     HTML5: <time datetime="2009-10-10">
+    
+    Schema: itemporp="author"
+    HTML5: rel="author"
 	
 -->
 <article class="review" itemprop="review" itemscope itemtype="http://schema.org/Review">
   <header class="review-meta">
+	<hgroup> 
+  		<h1 itemprop="about">British Virgin Islands</h1>
+        <h2 itemprop="name">A bareboat charter wonderland!</h2> 
+    </hgroup>
     <div class="review-ating" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
     	<span itemprop="ratingValue">1</span>/
         <span itemprop="bestRating">5</span>stars 
@@ -153,10 +160,23 @@
     </address>
     <time datetime="2009-10-10">5 minutes ago</time>
   </header>
-  <div class="review-entry" itemprop="reviewBody">
+  <!-- Summary Section -->
+  <section class="review-summary">
+  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada dui id justo porttitor lacinia. Donec nisl eros, condimentum eget pellentesque in, tincidunt ac turpis. Integer at urna eget enim tempus suscipit. Integer rhoncus sem sit amet nulla malesuada placerat. Duis sed lectus eros. Fusce consectetur augue nec est condimentum pellentesque. Phasellus vel vehicula tellus. Mauris bibendum ipsum non nisl varius lacinia. </p>
+  </section>
+  <section class="review-entry" itemprop="reviewBody">
     <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada dui id justo porttitor lacinia. Donec nisl eros, condimentum eget pellentesque in, tincidunt ac turpis. Integer at urna eget enim tempus suscipit. Integer rhoncus sem sit amet nulla malesuada placerat. Duis sed lectus eros. Fusce consectetur augue nec est condimentum pellentesque. Phasellus vel vehicula tellus. Mauris bibendum ipsum non nisl varius lacinia. </p>
     <p>Fusce nunc leo, pellentesque non bibendum at, iaculis ut erat. Nullam id tincidunt mi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam tristique egestas placerat. Nam vulputate adipiscing elit vitae semper. Phasellus malesuada nulla ut mi feugiat gravida. Suspendisse potenti. Pellentesque ullamcorper lorem eget sapien pretium non varius metus facilisis. Aliquam erat volutpat. Aliquam lacinia est at mi dictum nec accumsan neque rutrum. </p>
-  </div>
+  </section>
+  <footer>
+  <!-- Comments -->
+  <section itemscope itemtype="http://schema.org/UserComments">
+    <h2>Comments</h2>
+    <!-- Comment Articles [INSERT comment articles] -->
+  </section>
+  
+  </footer>
+  
 </article>
 
 <!-- Product Article with Review Articles
